@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataAccess.RestfullServices">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" Clicked="Button_OnClicked"></Button>
+                <!-- <Button Text="Update" Clicked="UpdateEvent"></Button>
+                <Button Text="Delete" Clicked="DeleteEvent"></Button>-->
+            </StackLayout>
+            <ListView x:Name="DepartementsList" ItemSelected="DepartementsList_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding DepartementId}" TextColor="Black"></Label>
+                                    <Label Text="{Binding Name}" TextColor="Black"></Label>
+                                  
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

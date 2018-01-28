@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataAccess.PostDepartement">
+    <ContentPage.Content>
+        <StackLayout  VerticalOptions="CenterAndExpand" >
+        <Entry x:Name="DepartementName" ></Entry>
+            <Button x:Name="PostBtn" Clicked="Button_OnClicked"></Button>
+            <Button x:Name="DeleteBtn"  Text="Delete Departement" Clicked="ButtonDelete_OnClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
