@@ -61,6 +61,9 @@
     <Compile Include="View\EmployeView.xaml.cs">
       <DependentUpon>EmployeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NewEmployeView.xaml.cs">
+      <DependentUpon>NewEmployeView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -135,7 +138,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="View\NewEmployeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\EmployeView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

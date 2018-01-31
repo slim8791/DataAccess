@@ -3,21 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataAccess.View.EmployeView">
     <StackLayout>
-            <Button Text="Add" ></Button>
+            <Button Text="Add" Clicked="Button_OnClicked" ></Button>
             <!-- <Button Text="Update" Clicked="UpdateEvent"></Button>
                 <Button Text="Delete" Clicked="DeleteEvent"></Button>-->
-        <ListView x:Name="EmployesList" ItemsSource="{Binding Employes}" >
+        <ListView x:Name="EmployesList" ItemsSource="{Binding Employes}" IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefresh}" ItemTapped="EmployesList_OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}" TextColor="Black"></Label>
-                                <Label Text="{Binding LastName}" TextColor="Black"></Label>
-                                <Label Text="{Binding Email}" TextColor="Black"></Label>
-                                <Label Text="{Binding DepartementId}" TextColor="Black"></Label>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" TextColor="Black"></Label>
+                                <Label Grid.Column="1"  Text="{Binding Email}" TextColor="Black"></Label>
+                                <Label Grid.Column="2"  Text="{Binding Departement.Name}" TextColor="Black"></Label>
 
-                            </StackLayout>
+                            </Grid>
                         </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>

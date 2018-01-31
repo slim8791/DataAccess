@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataAccess.View.NewEmployeView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding MyEmploye.Name, Mode=TwoWay}"></Entry>
+            <Entry Text="{Binding MyEmploye.Email, Mode=TwoWay}"></Entry>
+            <Entry Text="{Binding MyEmploye.DepartementId, Mode=TwoWay}"></Entry>
+            <Button Text="Post Employe" Command="{Binding PostEmploye}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
